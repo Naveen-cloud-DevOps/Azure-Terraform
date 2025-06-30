@@ -13,8 +13,7 @@ resource "azurerm_storage_account" "storage" {
 
   static_website {
     index_document = "index.html"
-    error_404_document = "404.html" # Optional
-  }
+   }
 }
 
 resource "azurerm_storage_blob" "index_html" {
