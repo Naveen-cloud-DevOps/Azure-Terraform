@@ -13,7 +13,7 @@ resource "azurerm_storage_account" "storage" {
 
   static_website {
     index_document = "index.html"
-   }
+  }
 }
 
 resource "azurerm_storage_blob" "index_html" {
