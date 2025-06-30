@@ -27,6 +27,8 @@ resource "azurerm_storage_blob" "example_blob" {
   storage_container_name = azurerm_storage_container.container.name
   type                   = "Block"
   source                 = "${path.module}/index.html" # make sure this file exists
+  content_type           = "text/html"
+"
 }
 
 output "blob_url" {
