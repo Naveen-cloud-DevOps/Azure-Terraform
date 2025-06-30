@@ -18,7 +18,7 @@ resource "azurerm_storage_account" "storage" {
 
 resource "azurerm_storage_blob" "index_html" {
   name                   = "index.html"
-  storage_account_name   = azurerm_storage_account.storage.name
+  storage_account_id = azurerm_storage_account.storage.id
   storage_container_name = "$web"
   type                   = "Block"
   source                 = "${path.module}/index.html"
