@@ -22,6 +22,7 @@ resource "azurerm_storage_blob" "index_html" {
   storage_container_name = "$web"
   type                   = "Block"
   source                 = "${path.module}/index.html"
+  content_type           = "text/html"
 }
 
 output "static_website_url" {
